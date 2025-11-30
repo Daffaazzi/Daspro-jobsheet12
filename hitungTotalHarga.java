@@ -27,7 +27,5 @@ public static void Menu(String namaPelanggan, boolean isMember) {
         int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
         return hargaTotal;
     }
-
-    
 }
     
