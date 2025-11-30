@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 public class hitungTotalHarga {
+
 public static void Menu(String namaPelanggan, boolean isMember) {
     System.out.println("Selamat datang, " + namaPelanggan + "!");
     
@@ -17,15 +20,35 @@ public static void Menu(String namaPelanggan, boolean isMember) {
     System.out.println("Silahkan Pilih Menu yang Annda inginkan");
     } 
 
-    public static void main(String[] args) {
-        Menu("Andi", true);
-    }
-
-     public static int hitungTotalHarga(int pilihanMenu, int banyakItem) {
-    int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 1800};
-       
-        int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
-        return hargaTotal;
-    }
-}
+   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
     
+    String namaPelanggan = "Andi";
+    boolean isMember = true;
+    
+    Menu(namaPelanggan, isMember);
+    
+    System.out.print("\nMasukkan nomor menu yang ingin anda pesan: ");
+    int pilihanMenu = sc.nextInt();
+    System.out.print("Masukkan jumlah item yang ingin dipesan: ");
+    int banyakItem = sc.nextInt();
+
+    int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem, isMember);
+    
+    System.out.println("Total harga untuk pesanan anda: Rp " + totalHarga);
+    
+    sc.close();
+}
+
+public static int hitungTotalHarga(int pilihanMenu, int banyakItem, boolean isMember) {
+    int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
+    
+    int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
+    if (isMember) {
+        hargaTotal = (int) (hargaTotal * 0.9);
+    }
+    
+    return hargaTotal;
+}
+
+}
