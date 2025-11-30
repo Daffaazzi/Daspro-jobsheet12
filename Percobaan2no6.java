@@ -30,8 +30,7 @@ public class Percobaan2no6 {
     }
     public static void main(String[] args) {
         Menu("Budi", true, "DISKON30");
-        Menu("Budi", true, "DISKON30"); 
-        Menu("Budi", true, "DISKON30"); 
+        Menu("Budi", true, "DISKON30"); // jikanamanya adalah budi
 
     }
 }
