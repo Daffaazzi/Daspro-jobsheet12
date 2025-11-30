@@ -128,9 +128,9 @@ Jelaskan!
 5. Jelaskan kapan sebuah fungsi sebaiknya menggunakan parameter dan kapan fungsi 
 boleh tanpa parameter, dengan mengacu pada fungsi hitungLuas dan hitungVolume 
 di Percobaan 5.
-> Jawab:
+> Jawab: hitungLuas & hitungVolume = perlu parameter, main = tidak perlu parameter.
 
 6. Jelaskan kapan sebuah fungsi sebaiknya memiliki nilai kembalian (return value) dan 
 kapan tidak perlu memiliki nilai kembalian, dengan mengacu pada fungsi main, 
 hitungLuas, dan hitungVolume.
-> Jawab: 
+> Jawab: Fungsi harus menggunakan parameter ketika membutuhkan data dari luar untuk diproses, Fungsi tidak perlu parameter ketika tidak membutuhkan input sama sekali, misal menampilkan menu atau pesan.
